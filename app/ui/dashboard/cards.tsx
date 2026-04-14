@@ -6,6 +6,8 @@ import {
 } from '@heroicons/react/24/outline';
 import { lusitana } from '@/app/ui/fonts';
 
+
+
 const iconMap = {
   collected: BanknotesIcon,
   customers: UserGroupIcon,
@@ -15,7 +17,12 @@ const iconMap = {
 import { fetchCardData } from "@/app/lib/data";
 
 export default async function CardWrapper() {
-  const {totalPaidInvoices, totalPendingInvoices, numberOfInvoices, numberOfCustomers} = await fetchCardData();
+  const {
+    totalPaidInvoices,
+    totalPendingInvoices,
+    numberOfInvoices,
+    numberOfCustomers
+  } = await fetchCardData();
   return (
     <>
       {/* NOTE: Uncomment this code in Chapter 9 */}
